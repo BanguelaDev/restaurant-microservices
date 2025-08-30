@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "dev:auth": "cd backend/auth && nodemon index.js",
+    "dev:orders": "cd backend/orders && nodemon index.js",
+    "dev:feedback": "cd backend/feedback && nodemon index.js",
+    "dev:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:auth\" \"npm run dev:orders\" \"npm run dev:feedback\" \"npm run dev:frontend\""
+  }
+}
